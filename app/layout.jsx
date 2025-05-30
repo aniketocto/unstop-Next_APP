@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         <GalaxyBackground />
-        {children}
+        <main className="relative z-0">{children}</main>
       </body>
     </html>
   );

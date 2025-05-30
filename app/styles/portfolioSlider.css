@@ -1,0 +1,121 @@
+/* portfolioSlider.css */
+
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+.portfolio_banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio_banner-slider {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autorun 40s infinite linear;
+  z-index: 2;
+}
+.portfolio_banner-slider:hover {
+  animation-play-state: paused;
+}
+@keyframes autorun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+.portfolio-slider_item {
+  position: absolute;
+  inset: 0 0 0 0;
+  /* Transform will be applied via inline style from React */
+}
+
+.portfolio-slider_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease; 
+}
+
+.portfolio-slider_item img:hover {
+    transform: scale(1.1);
+}
+
+.portfolio_banner .portfolio_banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio_banner .portfolio_banner-content > h1 {
+  font-family: "ICA Rubrik";
+  font-size: 16em;
+  line-height: 1em;
+  color: #25283b;
+  text-align: left;
+  width: 100%;
+}
+
+.portfolio_banner .portfolio_banner-content .portfolio_banner-copy {
+  font-family: "Poppins";
+  text-align: left;
+  width: 100%;
+  padding-left: 35px;
+  z-index: 2;
+}
+
+.portfolio_banner .portfolio_banner-content .portfolio_banner-copy h2 {
+  font-size: 3em;
+  font-family: "ICA Rubrik";
+  color: azure;
+}
+
+.portfolio_banner .portfolio_banner-content .portfolio_banner-copy p {
+  font-size: 1.5em;
+  font-family: "Poopins";
+  color: bisque;
+}
+
+.portfolio_banner .portfolio_model {
+  background-image: url("/images/astronaut-2.webp");
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+  animation: float 4s ease-in-out infinite; /* add this */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-25px); /* how high it floats */
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
