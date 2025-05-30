@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       >
         {/* <Navbar /> */}
         <GalaxyBackground />
-        {children}
+        <main className="relative z-0">{children}</main>
       </body>
     </html>
   );

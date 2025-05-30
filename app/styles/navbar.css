@@ -7,14 +7,14 @@ nav.navbar {
   z-index: 50;
   transition: transform 0.3s ease-in-out;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .logo-container .logo {
   width: 100%;
   height: auto;
-  max-width: 150px;
+  max-width: 200px;
   object-fit: contain;
 }
 
@@ -23,12 +23,6 @@ nav.navbar {
   display: flex;
   gap: 40px;
   padding: 30px 50px;
-}
-
-.nav-links {
-  font-size: 20px;
-  line-height: 1.4;
-  z-index: 9999999999999;
 }
 
 .clipped-shape::before {
@@ -104,61 +98,19 @@ nav.navbar {
   );
 }
 .clipped-shape span em {
-  /* background-image: var(--bg-gradient, linear-gradient(180deg, rgba(49, 14, 0, 0.4) 0%, rgba(30, 0, 0, 0.4) 100%)); */
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  position: absolute;
-  inset: 0;
+    /* background-image: var(--bg-gradient, linear-gradient(180deg, rgba(49, 14, 0, 0.4) 0%, rgba(30, 0, 0, 0.4) 100%)); */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    inset: 0;
 }
 .clipped-shape:after {
-  content: "";
-  background-color: var(--clip-border-color, #fff);
-  transition: background-color 0.4s ease-in-out;
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  -webkit-clip-path: polygon(
-    0px 8px,
-    0px calc(100% - 0px),
-    calc(100% - 42px) calc(100% - 0px),
-    calc(100% - 0px) calc(100% - 25px),
-    calc(100% - 0px) 14px,
-    calc(100% - 18px) 0px,
-    112px 0px,
-    102px 8px,
-    10px 8px,
-    0px 8px,
-    11px 9px,
-    103px 9px,
-    113px 1px,
-    calc(100% - 19px) 1px,
-    calc(100% - 1px) 15px,
-    calc(100% - 1px) calc(100% - 26px),
-    calc(100% - 43px) calc(100% - 1px),
-    1px calc(100% - 1px),
-    1px 9px,
-    11px 9px
-  );
-  clip-path: polygon(
-    0px 8px,
-    0px calc(100% - 0px),
-    calc(100% - 42px) calc(100% - 0px),
-    calc(100% - 0px) calc(100% - 25px),
-    calc(100% - 0px) 14px,
-    calc(100% - 18px) 0px,
-    112px 0px,
-    102px 8px,
-    10px 8px,
-    0px 8px,
-    11px 9px,
-    103px 9px,
-    113px 1px,
-    calc(100% - 19px) 1px,
-    calc(100% - 1px) 15px,
-    calc(100% - 1px) calc(100% - 26px),
-    calc(100% - 43px) calc(100% - 1px),
-    1px calc(100% - 1px),
-    1px 9px,
-    11px 9px
-  );
+    content: "";
+    background-color: var(--clip-border-color, #fff);
+    transition: background-color .4s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    -webkit-clip-path: polygon(0px 8px, 0px calc(100% - 0px), calc(100% - 42px) calc(100% - 0px), calc(100% - 0px) calc(100% - 25px), calc(100% - 0px) 14px, calc(100% - 18px) 0px, 112px 0px, 102px 8px, 10px 8px, 0px 8px, 11px 9px, 103px 9px, 113px 1px, calc(100% - 19px) 1px, calc(100% - 1px) 15px, calc(100% - 1px) calc(100% - 26px), calc(100% - 43px) calc(100% - 1px), 1px calc(100% - 1px), 1px 9px, 11px 9px);
+    clip-path: polygon(0px 8px, 0px calc(100% - 0px), calc(100% - 42px) calc(100% - 0px), calc(100% - 0px) calc(100% - 25px), calc(100% - 0px) 14px, calc(100% - 18px) 0px, 112px 0px, 102px 8px, 10px 8px, 0px 8px, 11px 9px, 103px 9px, 113px 1px, calc(100% - 19px) 1px, calc(100% - 1px) 15px, calc(100% - 1px) calc(100% - 26px), calc(100% - 43px) calc(100% - 1px), 1px calc(100% - 1px), 1px 9px, 11px 9px);
 }
