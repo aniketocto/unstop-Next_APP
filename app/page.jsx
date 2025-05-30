@@ -1,3 +1,9 @@
+import AboutSection from "./components/AboutSection";
+
 export default function Home() {
-  return <h1 className="Hii "></h1>;
+  return (
+    <>
+      <AboutSection />
+    </>
+  );
 }
